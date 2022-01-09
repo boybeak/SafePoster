@@ -34,6 +34,18 @@ SafePoster.by(view)
     }
 ```
 
+or use extension function.
+
+```kotlin
+view.postSafety {
+            
+}
+
+view.postDelayedSafety(3000L) {
+
+}
+```
+
 
 
 ## License

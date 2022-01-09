@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.github.boybeak.poster.SafePoster
+import com.github.boybeak.poster.postDelayedSafety
+import com.github.boybeak.poster.postSafety
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +23,12 @@ class MainActivity : AppCompatActivity() {
     fun post(btn: View) {
         val view = View(this).apply {
             setBackgroundColor(Color.DKGRAY)
+        }
+        view.postSafety {
+
+        }
+        view.postDelayedSafety(3000L) {
+
         }
         layout.addView(view, 100, 100)
 
