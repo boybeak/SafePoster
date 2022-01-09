@@ -24,11 +24,13 @@ class MainActivity : AppCompatActivity() {
         }
         layout.addView(view, 100, 100)
 
-        SafePoster.by(btn).liveWith(this).onThrow {
-
-        }.postDelayed(4000L) {
-            view.setBackgroundColor(Color.CYAN)
-        }
+        SafePoster.by(btn)
+            .liveWith(this)
+            .onThrow {
+                // Handle error here
+            }.postDelayed(4000L) {
+                view.setBackgroundColor(Color.CYAN)
+            }
 //        layout.removeView(view)
     }
 
